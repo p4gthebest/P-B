@@ -412,8 +412,6 @@ client.on('message', function(msg) {
     
     ❤️ **${prefix}ban** : To ban a member
     
-    ❤️ **${prefix}vote** : To make a vote
-    
     ❤️ **${prefix}clear** : To clear a text room
 
     ❤️ **${prefix}tempmute** : To tempmute a member
