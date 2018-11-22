@@ -530,12 +530,12 @@ client.on('message', message => {
 
 //WELCOME/LEAVING
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '﹄welcome﹃')
-    if(!channel) return;
+    let Wchannel = member.guild.channels.find('name', '﹄welcome﹃')
+    if(!Wchannel) return;
     let year = member.createdAt.getFullYear()
     let month = member.createdAt.getMonth()
     let day = member.createdAt.getDate()
-    channel.send(member.user + "has joined the server! First Join to discord :" + year + month + day);
+    Wchannel.send(member.user + "has joined the server! First Join to discord :" + year + month + day);
     let role = member.guild.roles.find('name', '{ Members')
     member.addRole(role);
 
