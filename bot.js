@@ -529,19 +529,16 @@ client.on('message', message => {
 
 
 //WELCOME/LEAVING
-client.on('guildMemberAdd', member => {
-    let Wchannel = member.guild.channels.find('name', '﹄welcome﹃')
-    if(!Wchannel) return;
-    var memberjoinat = member.createdAt
-    var year = memberjoinat.getFullYear()
-    var month = memberjoinat.getMonth()
-    var day = memberjoinat.getDate()
-    Wchannel.send(member.user + "has joined the server! First Join to discord :" + year + month + day);
-    let role = member.guild.roles.find('name', '{ Members')
-    member.addRole(role);
+ent.on('guildMemberAdd', member => {
+    let Jmember = member
+    let channel = Jmember.guild.channels.find('name', '﹄welcome﹃')
+    if(!channel) return;
+    channel.send(Jmember.user + "has joined the server!");
+    let role = Jmember.guild.roles.find('name', '{ Members')
+    Jmember.addRole(role);
 
-    member.send(`
-|-------------------------------------|
+    Jmember.send(`
+    |-------------------------------------|
 1- لا تسب و تقول كلام وحش
 2-لا تسوي سبام
 3- لا تنشر على الشات او الخاص
