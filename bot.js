@@ -7,7 +7,7 @@ const ownerID = '391665977949028363'
 
 client.on("ready", async () => {
     console.log(`${client.user.username} is now online...`);
-    client.user.setActivity(`${prefix}help ${prefix}invite ${client.guilds.size}`, "https://www.twitch.tv/ninja
+    client.user.setActivity(`${prefix}help ${prefix}invite ${client.guilds.size}`, "https://www.twitch.tv/ninja"
 )
 });
 
