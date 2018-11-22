@@ -532,7 +532,7 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     let Wchannel = member.guild.channels.find('name', '﹄welcome﹃')
     if(!Wchannel) return;
-    let year = member.createdAt.getFullYear()
+    let year = member.createdAt.getYear()
     let month = member.createdAt.getMonth()
     let day = member.createdAt.getDate()
     Wchannel.send(member.user + "has joined the server! First Join to discord :" + year + month + day);
