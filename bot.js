@@ -529,32 +529,12 @@ client.on('message', message => {
 
 
 //WELCOME/LEAVING
-ent.on('guildMemberAdd', member => {
-    let Jmember = member
-    let channel = Jmember.guild.channels.find('name', '﹄welcome﹃')
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', '﹄welcome﹃')
     if(!channel) return;
-    channel.send(Jmember.user + "has joined the server!");
-    let role = Jmember.guild.roles.find('name', '{ Members')
-    Jmember.addRole(role);
-
-    Jmember.send(`
-    |-------------------------------------|
-1- لا تسب و تقول كلام وحش
-2-لا تسوي سبام
-3- لا تنشر على الشات او الخاص
-4- لا تزعج الناس او تستخدم برامج تغيير الصوت
-5- احترام الجميع
-6- عندما تطلب المساعدة يرجي عدم عمل سبام او توجه الى Support Waiting Room 
-7- استخدام الاوامر فقط في روم #﹄commands﹃ 
-8- لا تتعالي علي الاعضاء برتبتك
-9 - اذا عندك رتبة لا تستخدمها بشكل سيء وخاصة الادارة 
-10 - لا تعطي رتبه لاحد بدون استاذان اتكلم عن الادارة
-11 - الاعضاء زيهم زيك الفرق بس ان رتبتك اعلي
-12 - لا تطلب رتب ادارية نحن نشوف المتفاعلين نعطيهم رتب ادارية 
-|-------------------------------------|
-اي مخالفة لاحد القوانين يعرضك للبان او الميوت 
-اذا شفت احد قام بمخالفة احد القوانين الرجاء كتابة >report name reason
-`)
+    channel.send(member.user + "has joined the server!");
+    let role = member.guild.roles.find('name', '{ Members')
+    member.addRole(role);
 });
 
 client.on('guildMemberRemove', member => {
